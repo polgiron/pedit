@@ -1,0 +1,41 @@
+/*******************************************************************/
+/*TEXT*/
+
+.peditTextEditWrapper{
+	position: relative;
+}
+*[data-textid]{
+	/*position: relative;*/
+
+	a{
+		text-decoration: underline;
+		color: inherit;
+	}
+}
+.peditTextButton{
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	.border-radius(1000px);
+	width: 40px;
+	height: 40px;
+	.box-shadow(0,0,5px,grey);
+	cursor: pointer;
+}
+.peditTextButtonEdit{
+	background: lightblue url("../pedit/text/img/peditIconEdit.png") no-repeat center;
+}
+.peditTextButtonSave{
+	background: lightgreen url("../pedit/text/img/peditIconSave.png") no-repeat center;
+}
+.peditTextButtonLoading{
+	background: black url("../pedit/common/img/loaderWhite.gif") no-repeat center;	
+}
+
+#ckeInlineToolbar{
+	/*width: 210px;*/
+	/*height: 50px;*/
+	/*background: red;*/
+	position: absolute;
+	top: -50px;
+}

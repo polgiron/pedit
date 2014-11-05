@@ -1,0 +1,134 @@
+/*******************************************************************/
+/*GALLERY*/
+
+.peditGalleryWrapper
+{
+	margin-bottom: 15px;
+	text-align: center;
+	
+	.peditGalleryElement{
+		position: relative;
+		/*width: 150px;*/
+		min-width: 150px;
+		height: 150px;
+		/*overflow: hidden;*/
+		margin: 5px;
+		.transition();
+		float: left;
+		/*display: inline-block;*/
+		background: @masterColorLightest;
+		/*background: #A7BCBD;*/
+		.border-radius();
+
+		img{
+			.border-radius();
+		}
+		.peditImgUploadLoader{
+			padding-top: 50px;
+			text-align: center;
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			.border-radius();
+			/*background: rgba(0,0,0,0.8);*/
+		}
+	}
+	.peditGalleryElementImage{
+		.box-shadow();
+		&:hover{
+			.box-shadow(0,0,8px,@masterColor);
+			/*.box-shadow(0,0,15px,rgba(0,0,0,0.7));*/
+		}
+	}
+	.peditGalleryEmpty{
+		height: 144px;
+		width: 144px;
+		background: transparent;
+		border: 3px dotted grey;
+		background: url('../pedit/gallery/img/peditIconSadMiddle.png') no-repeat center 25px;
+
+		p{
+			text-align: center;
+			padding-top: 90px;
+			font-size: 1.1em;
+		}
+	}
+	.peditGalleryElementTools{
+		.box-shadow-inset(0,0,10px,rgba(0,0,0,0.4));
+		cursor: pointer;
+		width: 150px;
+		height: 150px;
+
+		&:hover{
+			opacity: 1;
+			background-color: @masterColorLighter;
+		}
+		p{
+			text-align: center;
+			padding-top: 90px;
+			font-size: 1.1em;
+		}
+	}
+	.peditGalleryAddLauncher{
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+	}
+	.peditGalleryAdd{
+		background: @masterColorLightest url('../pedit/gallery/img/peditIconAddMiddle.png') no-repeat center 25px;
+	}
+	.peditGalleryClear{
+		background: @masterColorLightest url('../pedit/gallery/img/peditIconTrashMiddle.png') no-repeat center 25px;
+
+		.peditGalleryClearConfirm{
+			display: none;
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			.border-radius();
+			background: rgba(0,0,0,0.95);
+			color: white;
+			font-size: 1.6em;
+
+			p{
+				padding-top: 35px;
+			}
+		}
+	}
+}
+.peditImgEditTitleWrapper
+{
+	display: none;
+	width: 191px;
+	position: absolute;
+	bottom: 10px;
+	left: -25px;
+	padding: 5px;
+	z-index: 1000;
+	.border-radius();
+	background: rgba(0,0,0,0.8);
+	border: 1px solid rgba(255,255,255,0.8);
+
+	input{
+		display: block;
+		float: left;
+		.border-radius(2px);
+		width: 150px;
+		/*height: 25px;*/
+		border: 2px solid @masterColorLighter;
+		background: @blanc;
+		padding-left: 5px;
+	}
+	p{
+		display: block;
+		cursor: pointer;
+		float: left;
+		width: 36px;
+		height: 36px;
+		margin-left: 5px;
+		.border-radius(2px);
+		background: #3f9a3a url('../pedit/gallery/img/peditIconConfirmSmall.png') no-repeat center;
+		opacity: 0.8;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+}

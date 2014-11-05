@@ -1,0 +1,66 @@
+/*******************************************************************/
+/*LIVRE*/
+
+.peditLivreWrapper
+{
+	width: 750px;
+	margin: auto;
+	
+	.peditLivreElement{
+		width: 200px;
+		height: 214px;
+		padding: 15px;
+		float: left;
+		margin: 10px;
+		position: relative;
+
+		textarea{
+			height: 80px;
+			margin-bottom: 5px;
+		}
+		label{
+			display: block;
+			margin-bottom: 5px;
+		}
+		.peditLivreError{
+			float: left;
+			color: red;
+			margin-top: 12px;
+			width: 130px;
+			/*background: blue;*/
+		}
+		.peditButton{
+			float: right;
+			margin-top: 15px;
+			/*width: 100%;*/
+			background: lightblue;
+		}
+		.peditlivreContent{
+			height: 170px;
+			/*padding: 15px;*/
+			overflow: auto;
+		}
+		.peditlivreInfos{
+			border-top: 1px solid @masterColorLight;
+			background: white;
+			position: absolute;
+			left: 0; right: 0; bottom: 0;
+			padding: 15px 10px;
+			.border-radius-advanced(0, 0, 4px, 4px);
+
+			.peditLivreAuthor{
+				float: left;
+			}
+			.peditLivreDate{
+				float: right;
+			}
+		}
+	}
+	#peditLivreAddWrapper{
+		padding: 15px;
+	}
+	#peditLivreEmpty{
+		font-size: 2em;
+		text-align: center;
+	}
+}

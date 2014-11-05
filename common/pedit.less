@@ -1,0 +1,289 @@
+@colorButtonCancel : rgba(232,120,120,0.9);
+@colorButtonConfirm : rgba(208,213,69,0.9);
+
+input:-webkit-autofill {
+	/*-webkit-box-shadow: 0 0 0px 1000px #e7e7e7 inset;*/
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#peditBack
+{
+	display: none;
+	/*background: rgba(52,43,35,0.8);*/
+	background: rgba(0,0,0,0.6);
+	/*background: rgba(80,84,92,0.85);*/
+	/*background: url('../fancybox/fancybox_overlay.png');*/
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+}
+#peditAdminLoggedWrapper{
+	/*position: fixed;*/
+	/*top: 0; left: 0; right: 0;*/
+	/*z-index: 10000;*/
+	background: rgba(0,0,0,0.8);
+
+	#peditAdminLoggedContent{
+		position: relative;
+		width: 800px;
+		margin: auto;
+	}
+	#peditAdminText{
+		padding: 20px;
+		padding-left: 60px;
+		font-size: 1.5em;
+		color: white;
+		float: left;
+		background: url("../pedit/common/img/peditIconAdmin.png") no-repeat left;
+	}
+	#peditAdminLoggedRight{
+		float: right;
+		margin-top: 12px;
+	}
+	#peditVersion{
+		color: white;
+		float: left;
+		margin-right: 15px;
+		line-height: 43px;
+	}
+	.peditDecoLauncher{
+		background: rgba(255,0,0,0.6);
+		color: black;
+		padding: 8px 12px;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		cursor: pointer;
+		float: left;
+		/*position: absolute;*/
+		/*top: 12px;*/
+		/*right: 0;*/
+
+		&:hover{
+			background: rgba(255,0,0,0.8);
+		}
+	}
+}
+.bgWhiteShadow
+{
+	background:  #f2f2f2;
+	.border-radius(4px);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.6),0 0 1px 1px rgba(80,84,92,0.1),0 1px 5px rgba(80,84,92,0.5);
+}
+.peditPopup
+{
+	display: none;
+	left: 50%;
+	z-index: 1001;
+	position: relative;
+}
+.peditClosePopup{
+	display: none;
+	@width : 30px;
+	width: @width;
+	height: @width;
+	.border-radius(1000px);
+	cursor: pointer;
+	position: absolute;
+	top: -(@width/2);
+	right: -(@width/2);
+	z-index: 1002;
+	background: url("../pedit/common/img/peditClosePopup.png") center no-repeat;
+
+	&:hover{
+		background-color: rgba(255,0,0,0.4);
+	}
+}
+.peditPopupFixed
+{
+	position: fixed;
+	top: 70px;
+	/*padding: 12px 15px;*/
+	padding: 0;
+	.box-shadow(0px,10px,25px,rgba(0,0,0,0.5));
+
+	h1{
+		color: rgba(0,0,0,0.5);
+		font-size: 2em;
+		padding: 15px 30px;
+		text-align: center;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		.masterColorBg(0.5);
+		.border-radius-advanced(4px,4px,0,0);
+		overflow: hidden;
+	}
+	form{
+		padding: 15px;
+		text-align: center;
+		position: relative;
+
+		label{
+			display: block;
+			text-align: left;
+			margin-bottom: 5px;
+			margin-left: 2px;
+			margin-top: 10px;
+		}
+		.peditButtonWrapper{
+			margin-top: 30px;
+
+			.peditButtonCancel{
+				float: left;
+			}
+			.peditButtonConfirm{
+				float: right;
+			}
+		}
+	}
+}
+input[type=text],
+input[type=password],
+textarea,
+input[type=file]{
+	display: block;
+	margin: auto;
+	border: 1px dashed lightgrey;
+	background: white;
+	color: rgba(0,0,0,0.6);
+	outline: 0;
+	padding: 7px 10px;
+	.border-radius(3px);
+	width: 100%;
+	.box-sizing();
+}
+textarea{
+	resize: none;
+}
+.peditButton
+{
+	/*display: inline-block;*/
+	padding: 0 10px;
+	height: 33px;
+	line-height: 33px;
+	opacity: 1;
+	cursor: pointer;
+	border: 0;
+	color: rgba(0,0,0,0.9);
+	font-size: 0.9em;
+	text-align: center;
+	
+	.text-shadow(0,1px,rgba(255,255,255,0.2));
+	.transition();
+	.border-radius(2px);
+	.box-shadow-inset(0,0,6px,rgba(0,0,0,0.5));
+}
+.peditButton:hover
+{
+	/*opacity: 0.8;*/
+	.box-shadow-inset(0,0,6px,rgba(0,0,0,0.7));
+}
+.peditButtonConfirm,
+.peditButtonCancel
+{
+	width: 90px;
+	padding: 0;
+}
+.peditButtonCancel
+{
+	background: @colorButtonCancel;
+}
+.peditButtonConfirm
+{
+	background: @colorButtonConfirm;
+}
+.peditLoading{
+	display: none;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	.border-radius();
+	background: rgba(0,0,0,0.8) url("../pedit/common/img/loaderWhite.gif") center no-repeat;
+}
+.peditSuccess{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	.border-radius();
+	background: rgba(0,0,0,0.8) url("../pedit/common/img/peditIconConfirmGreen.png") center no-repeat;	
+}
+
+
+/*******************************************************************/
+/*CONNEXION*/
+
+#peditCoWrapper
+{
+	display: none;
+	@widthCo : 320px;
+	width: @widthCo;
+	margin-left: -(@widthCo/2);
+
+	input[type=password]{
+		float: left;
+		width: 185px;
+	}
+	input[type=submit]{
+		float: right;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**[textid]
+{
+	word-wrap: break-word;
+	position: relative;
+}
+.peditIconEdit,
+.peditIconDelete
+{
+	display: none;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	z-index: 1000;
+	cursor: pointer;
+
+	border-radius: 1000px 1000px 1000px 0;
+	padding: 5px;
+}
+.peditIconEdit
+{
+	background: #A7BCBD url('../pedit/peditIconEdit.png') no-repeat 5px 5px;
+}
+.peditIconDelete
+{
+	background: #A7BCBD url('../pedit/peditIconDelete.png') no-repeat 5px 5px;
+}
+.peditIconEdit:hover,
+.peditIconDelete:hover
+{
+	background-color: #819091;
+}
+
+*[textid]:hover .peditIconEdit
+{
+	display: block;
+}
+*/
